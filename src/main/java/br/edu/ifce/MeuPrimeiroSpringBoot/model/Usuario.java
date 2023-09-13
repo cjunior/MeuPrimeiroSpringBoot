@@ -19,6 +19,7 @@ public class Usuario {
 	private String nome;
 	private String cpf;
 	private Date dataNascimento;
+
 	public String getNome() {
 		return nome;
 	}
