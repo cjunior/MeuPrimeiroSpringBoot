@@ -13,8 +13,8 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.OneToOne;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-public class Endereco {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Endereco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

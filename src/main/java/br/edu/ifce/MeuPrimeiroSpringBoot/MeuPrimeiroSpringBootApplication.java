@@ -38,7 +38,6 @@ public class MeuPrimeiroSpringBootApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		
 	Cliente c = new Cliente();
-	Endereco e = new Endereco();
 
 	
 		
