@@ -13,14 +13,11 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.OneToOne;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo", length = 1, discriminatorType = DiscriminatorType.STRING)
-@DiscriminatorValue("E")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Endereco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
 	private String logradouro;
 	private String numero;
 	private String complemento;

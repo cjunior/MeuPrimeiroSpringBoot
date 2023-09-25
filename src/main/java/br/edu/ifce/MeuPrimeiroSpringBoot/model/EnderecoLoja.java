@@ -1,10 +1,10 @@
 package br.edu.ifce.MeuPrimeiroSpringBoot.model;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 
 @Entity
-@DiscriminatorValue(value = "L")
+@PrimaryKeyJoinColumn(name = "id")
 public class EnderecoLoja extends Endereco {
 
 }
