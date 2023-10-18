@@ -15,20 +15,12 @@ import br.edu.ifce.MeuPrimeiroSpringBoot.repository.ClienteRepository;
 import br.edu.ifce.MeuPrimeiroSpringBoot.repository.EnderecoRepository;
 import br.edu.ifce.MeuPrimeiroSpringBoot.repository.LojasRepository;
 import br.edu.ifce.MeuPrimeiroSpringBoot.repository.UsuaryRepository;
+import br.edu.ifce.MeuPrimeiroSpringBoot.serviceImpl.ClienteServiceImpl;
 
 @SpringBootApplication
 public class MeuPrimeiroSpringBootApplication implements CommandLineRunner {
 	@Autowired
-	private UsuaryRepository u;
-	
-	@Autowired
-	private ClienteRepository cl;
-	
-	@Autowired
-	private LojasRepository loja;
-	
-	@Autowired
-	private EnderecoRepository end;
+	ClienteServiceImpl cliente;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(MeuPrimeiroSpringBootApplication.class, args);
@@ -37,7 +29,14 @@ public class MeuPrimeiroSpringBootApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-	Cliente c = new Cliente();
+		Cliente c = new Cliente();
+		c.setCpf("999.999.999-99");
+		c.setNome("Beltrano de tal");
+		c.setDtNascimento(new Date());
+		c.setDtCadastro(new Date());
+		cliente.salvar(c);
+		
+
 
 	
 		
