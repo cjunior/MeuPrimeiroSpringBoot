@@ -35,7 +35,18 @@ public class ClienteServiceImpl  implements ClienteService{
 		Cliente c = buscarClientePorId(id);
 		c.setCpf(newinfo.getCpf());
 		c.setNome(newinfo.getNome());
-		return salvar(c);
+		return cliente.save(c);
+	}
+
+	@Override
+	public Cliente editar(Cliente newinfo) {
+		return cliente.save(newinfo);
+	}
+
+	@Override
+	public void excluir(Long id) {
+		cliente.deleteById(id);
+		
 	}
 	
 }

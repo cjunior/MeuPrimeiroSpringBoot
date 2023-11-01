@@ -1,20 +1,10 @@
 package br.edu.ifce.MeuPrimeiroSpringBoot;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import br.edu.ifce.MeuPrimeiroSpringBoot.model.Cliente;
-import br.edu.ifce.MeuPrimeiroSpringBoot.model.Endereco;
-import br.edu.ifce.MeuPrimeiroSpringBoot.model.Lojas;
-import br.edu.ifce.MeuPrimeiroSpringBoot.model.Usuario;
-import br.edu.ifce.MeuPrimeiroSpringBoot.repository.ClienteRepository;
-import br.edu.ifce.MeuPrimeiroSpringBoot.repository.EnderecoRepository;
-import br.edu.ifce.MeuPrimeiroSpringBoot.repository.LojasRepository;
-import br.edu.ifce.MeuPrimeiroSpringBoot.repository.UsuaryRepository;
 import br.edu.ifce.MeuPrimeiroSpringBoot.serviceImpl.ClienteServiceImpl;
 
 @SpringBootApplication
@@ -27,22 +17,7 @@ public class MeuPrimeiroSpringBootApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
-		
-		Cliente c = new Cliente();
-		c.setCpf("999.999.999-99");
-		c.setNome("Beltrano de tal");
-		c.setDtNascimento(new Date());
-		c.setDtCadastro(new Date());
-		cliente.salvar(c);
-		
-
-
-	
-		
-		
-
-		
+	public void run(String... args) throws Exception {		
 		
 	}
 
