@@ -19,6 +19,7 @@ public class Usuario {
 	private String nome;
 	private String cpf;
 	private Date dataNascimento;
+	private String password;
 
 	public String getNome() {
 		return nome;
@@ -37,6 +38,18 @@ public class Usuario {
 	}
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	
